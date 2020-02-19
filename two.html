@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <video id="video" style="height: 440px; margin: 0 auto; display: block;">
+      <source src="./video.mp4" />
+    </video>
+
+    <script>
+      const player = document.getElementById('video')
+      window.addEventListener('mousemove', event => {
+        const { clientX, clientY } = event
+        const percentX = clientX / window.innerWidth
+        const newCurrentTime = player.duration * percentX
+        player.currentTime = newCurrentTime % player.duration
+      })
+    </script>
+  </body>
+</html>
