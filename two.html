@@ -7,7 +7,7 @@
     <script>
       const player = document.getElementById('video')
       window.addEventListener('mousemove', event => {
-        const { clientX, clientY } = event
+        const { clientX } = event
         const percentX = clientX / window.innerWidth
         const newCurrentTime = player.duration * percentX
         player.currentTime = newCurrentTime
