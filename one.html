@@ -1,4 +1,4 @@
-<html>
+
   <body>
     <video id="video" style="height: 440px; margin: 0 auto; display: block;">
       <source src="./3d-model.mp4" />
@@ -10,7 +10,7 @@
         const { clientX, clientY } = event
         const percentX = clientX / window.innerWidth
         const newCurrentTime = player.duration * percentX
-        player.currentTime = newCurrentTime % player.duration
+        player.currentTime = newCurrentTime
       })
     </script>
   </body>
